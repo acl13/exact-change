@@ -17,7 +17,11 @@ function dispenseChange(amount) {
     alert("Please enter a value");
     return;
   }
+
+  // Splits amount into dollars and cents: dollars at index 0, cents at index 1
   const dollarsAndCents = amount.toString().split(".");
+  // Limits cents to two decimal places
+  dollarsAndCents[1] = dollarsAndCents[1].slice(0, 2);
   const dollars = dispenseDollars(+dollarsAndCents[0]);
   const cents = dispenseCents(+dollarsAndCents[1]);
 
