@@ -1,10 +1,10 @@
 # exact-change
 
-○ User can input any amount of money (with up to two decimal places)
-○ Application will respond with the amount in units of US currency with the least
-amount of change given.
-
 [Deployment](https://acl13.github.io/exact-change/)
+
+- User can input any amount of money (up to two decimal places)
+- Application will respond with the amount in units of US currency with the least
+  amount of change given.
 
 <h1>Setting Up the Project</h1>
 
@@ -23,12 +23,14 @@ Navigate into the project directory:
 Installing Dependencies:
 `npm install`
 
-Running tests
+<h3>Running tests</h3>
 Check that your package.json file includes the following:
 
+```
 "scripts": {
 "test": "jasmine"
 }
+```
 
 To run tests:
 `npm test`
