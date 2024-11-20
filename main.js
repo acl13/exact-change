@@ -5,7 +5,10 @@ const amount = document.getElementById("amount");
 const displayChangeBtn = document.getElementById("display-change");
 const clearBtn = document.getElementById("clear");
 
-displayChangeBtn.addEventListener("click", () => dispenseChange(amount.value));
+displayChangeBtn.addEventListener("click", () => {
+  amount.value = Math.round(amount.value * 100) / 100;
+  dispenseChange(amount.value);
+});
 clearBtn.addEventListener("click", () => {
   document.querySelector("#bills").replaceChildren();
   document.querySelector("#coins").replaceChildren();
