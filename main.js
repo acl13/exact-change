@@ -21,6 +21,13 @@ function dispenseChange(amount) {
     return;
   }
 
+  if (!amount.toString().includes(".")) {
+    // handles if user only inputs dollar amount (whole number)
+    const dollarAmount = dispenseDollars(amount);
+    displayDollars(dollarAmount);
+    return;
+  }
+
   // Splits amount into dollars and cents: dollars at index 0, cents at index 1
   const dollarsAndCents = amount.toString().split(".");
   // Limits cents to two decimal places
