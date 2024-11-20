@@ -26,7 +26,6 @@ export default function dispenseDollars(amount) {
   dollars.ones = dollars.amount;
   // Resets amount at 0.
   dollars.amount = 0;
-  console.log(dollars);
   // displayDollars(dollars);
   return dollars;
 }

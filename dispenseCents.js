@@ -18,7 +18,6 @@ export default function dispenseCents(amount) {
   cents.pennies = cents.amount;
   // Resets amount at 0.
   cents.amount = 0;
-  console.log(cents);
   // displayCents(cents);
   return cents;
 }
